@@ -2,17 +2,11 @@
 import './App.css'
 import editIcon from './assets/Vector (1).svg'
 import trashIcon from './assets/Vector.svg'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 function App() {
- // states e variáveis
 
- //------ ATIVIDADE ------
-  // State com 4 tarefas
- //criar um state chamado
- //tasklist como iniciando com um array de
- //objetos [{ xpto: abc, iii: uuu}]
- //já preenchido com 4 tarefas
   const [taskList, setTaskList] = useState([
     {
       id: 1,
@@ -32,9 +26,31 @@ function App() {
     },
   ]);
 
- //em seguida fazer um map e gerar os cards
- //com todas as tarefas
- //funções e effects
+  // Read (Get)
+  const getTasks = async () => {
+    try {
+      const APIReturn = await axios.get("http://localhost:3000/taskpoin")
+      const bodyAPI = await  APIReturn.data
+      setTaskList(bodyAPI)
+    } catch (error) {
+      console.error("Erro ao buscar tarefas:", error)
+    }
+  }
+
+   // Create (Post)
+  const createTask = () => {}
+
+   // Update (Put/Patch)
+  const putTask = () => {}
+
+   // Delete (Delete)
+  const deleteTask = () => {}
+
+  //montagem do componente - ciclo de vida do componente React
+  useEffect(() => {
+    getTasks()
+  }, [])
+
 
   return (
   <>
