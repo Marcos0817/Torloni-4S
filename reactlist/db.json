@@ -1,8 +1,17 @@
 {
-    "taskpoin": [
-        {"id": 1, "descrição": "Revisar HTML Semântico"},
-        {"id": 2, "descrição": "Revisar CSS"},
-        {"id": 3, "descrição": "Revisar JavaScript"},
-        {"id": 4, "descrição": "Revisar React"}
-    ]
+  "taskpoint": [
+    {
+      "id": "1",
+      "descricao": "Revisar HTML Semântico"
+    },
+    {
+      "id": "2",
+      "descricao": "Revisar CSS"
+    },
+    {
+      "id": "3",
+      "descricao": "Revisar JavaScript"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
 }

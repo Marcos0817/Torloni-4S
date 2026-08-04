@@ -18,8 +18,7 @@
 
 /* MAIN*/
 .body-section {
-    width: 100%;
-    height: calc(100vh - 110px);
+    width: 100%;  
     padding: 20px;
 }
 
@@ -116,7 +115,7 @@
 }
 
 /* FOOTER*/
-.footer-section {
+.footer-list {
     width: 100%;
     height: 30px;
     display: flex;
@@ -124,6 +123,6 @@
     align-items: center;
 }
 
-.footer-section_right-text {
+.footer-list_right-text {
     font-size: 12px;
 }
